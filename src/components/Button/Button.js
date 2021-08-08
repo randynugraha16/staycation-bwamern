@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
+import { Button as ButtonBootstrap } from "react-bootstrap";
 
 export default function Button(props) {
   const className = [props.className];
@@ -40,7 +42,7 @@ export default function Button(props) {
           target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
         >
-          {props.childern}
+          {props.children}
         </a>
       );
     } else {
@@ -51,18 +53,21 @@ export default function Button(props) {
           style={props.style}
           onClick={onClick}
         >
-          {props.childern}
+          {props.children}
         </Link>
       );
     }
   }
 
   return (
-    <button
+    <ButtonBootstrap
       className={className.join(" ")}
       style={props.style}
       onClick={onclick}
-    ></button>
+      variant={props.variant}
+    >
+      {props.children}
+    </ButtonBootstrap>
   );
 }
 
