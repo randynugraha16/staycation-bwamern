@@ -29,6 +29,9 @@ header {
         &.active {
           a.nav-link {
             color: $primary;
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
         a {
