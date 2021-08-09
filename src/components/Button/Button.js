@@ -13,7 +13,7 @@ export default function Button(props) {
   if (props.isBlock) className.push("btn-block");
 
   const onClick = () => {
-    if (props.onclick) props.onClick();
+    if (props.onClick) props.onClick();
   };
 
   if (props.isDisabled || props.isLoading) {
@@ -63,7 +63,7 @@ export default function Button(props) {
     <ButtonBootstrap
       className={className.join(" ")}
       style={props.style}
-      onClick={onclick}
+      onClick={onClick}
       variant={props.variant}
     >
       {props.children}
@@ -73,9 +73,10 @@ export default function Button(props) {
 
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
-  onclick: propTypes.func,
+  onClick: propTypes.func,
   target: propTypes.string,
   className: propTypes.string,
+  isPrimary: propTypes.bool,
   isDisabled: propTypes.bool,
   isExternal: propTypes.bool,
   isLoading: propTypes.bool,

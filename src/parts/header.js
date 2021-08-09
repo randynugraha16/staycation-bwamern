@@ -12,7 +12,7 @@ export default function Header(props) {
     <header className="spacing-sm">
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <IconText />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "./app.scss";
+import "./assets/scss/app.scss";
 import React from "react";
 import landingPage from "./pages/landingPage";
 function App() {
