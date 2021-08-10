@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
@@ -17,10 +18,15 @@ $theme-colors: map-merge(
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "Star.scss";
 
 * {
   font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+}
+
+.card {
+  border: none;
 }
 
 section {
@@ -29,6 +35,10 @@ section {
 
 .text-gray-500 {
   color: #adb5bd;
+}
+
+.text-gray-800 {
+  color: $gray-800;
 }
 
 .text-darkblue {
@@ -136,6 +146,20 @@ section {
 .card {
   height: 100%;
 
+  &:hover {
+    &::after {
+      transform: scale(1);
+    }
+    .img-wrapper {
+      transform: scale(1.1);
+    }
+    .tag {
+      top: 0;
+      right: 0;
+      transform: scale(1.1);
+    }
+  }
+
   .tag {
     z-index: 3;
     font-size: 0.875rem;
@@ -146,17 +170,19 @@ section {
     right: 0;
     color: #fff;
     min-height: 30px;
-    border-radius: 0 0 0 15px;
+    border-radius: 0 15px 0 15px;
+    transition: 0.3s transform;
     span {
       font-weight: 300;
     }
   }
 
-  .imng-wrapper {
+  .img-wrapper {
     height: 100%;
     margin-bottom: 0;
     border-radius: 0.9375rem;
     overflow: hidden;
+    transition: 0.3s transform ease-in-out;
   }
 
   .meta-wrapper {
@@ -227,5 +253,14 @@ section {
         transform: scale(1);
       }
     }
+  }
+}
+
+footer {
+  .text-darkblue {
+    font-size: 18px;
+  }
+  li {
+    margin-bottom: 1rem;
   }
 }
