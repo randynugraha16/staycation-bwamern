@@ -19,6 +19,9 @@ $theme-colors: map-merge(
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "Star.scss";
+@import "InputNumber.scss";
+@import "InputDate.scss";
+@import "Breadcrumb.scss";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -30,7 +33,10 @@ $theme-colors: map-merge(
 }
 
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 2rem;
+  }
 }
 
 .text-gray-500 {
@@ -43,7 +49,6 @@ section {
 
 .text-darkblue {
   color: #152c5b;
-  font-weight: bold;
 }
 
 .btn-shadow {
@@ -69,6 +74,7 @@ header {
   border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
+  margin-bottom: 2.5rem;
 
   .navbar {
     .navbar-nav {
@@ -100,7 +106,33 @@ header {
   }
 }
 
+.card {
+  &.booking-form {
+    padding: 4rem 4rem;
+    overflow: visible;
+
+    @include media-breakpoint-down(lg) {
+      padding: 2rem 2rem;
+    }
+  }
+  &.border {
+    height: 82%;
+    @include media-breakpoint-down(lg) {
+      height: 100%;
+    }
+  }
+}
 section {
+  main {
+    padding: 0 1rem;
+    .description {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 170%;
+      color: #b0b0b0;
+      margin-bottom: 4rem;
+    }
+  }
   .tag__line {
     font-weight: bold;
     font-size: 3em;
@@ -145,20 +177,22 @@ section {
 
 .card {
   height: 100%;
+  overflow: hidden;
+  border-radius: 0.9375rem;
 
-  &:hover {
-    &::after {
-      transform: scale(1);
-    }
-    .img-wrapper {
-      transform: scale(1.1);
-    }
-    .tag {
-      top: 0;
-      right: 0;
-      transform: scale(1.1);
-    }
-  }
+  // &:hover {
+  //   &::after {
+  //     transform: scale(1);
+  //   }
+  //   .img-wrapper {
+  //     transform: scale(1.1);
+  //   }
+  //   .tag {
+  //     top: 0;
+  //     right: 0;
+  //     transform: scale(1.1);
+  //   }
+  // }
 
   .tag {
     z-index: 3;
@@ -182,7 +216,18 @@ section {
     margin-bottom: 0;
     border-radius: 0.9375rem;
     overflow: hidden;
-    transition: 0.3s transform ease-in-out;
+    align-self: center;
+    display: flex;
+    cursor: pointer;
+
+    transition: 0.5s transform ease-in-out;
+
+    &.feature-img {
+      transform: scale(1.1);
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 
   .meta-wrapper {

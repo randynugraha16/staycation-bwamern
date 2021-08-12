@@ -40,7 +40,7 @@ export default function Categories({ data }) {
                       <div className="meta-wrapper">
                         <Button
                           className="stretched-link text-decoration-none d-block text-gray-800"
-                          href={`/propperties/${item._id}`}
+                          href={`/properties/${item._id}`}
                           type="link"
                         >
                           <h5 className="fw-bold text-darkblue">{item.name}</h5>

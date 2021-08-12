@@ -32,7 +32,7 @@ export default function Header(props) {
                   <Button
                     className="text-center nav-link"
                     type="link"
-                    href="/browse-by"
+                    href="/example"
                   >
                     Browse By
                   </Button>

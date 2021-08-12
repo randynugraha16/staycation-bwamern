@@ -19,8 +19,8 @@ export default function Hero(props) {
 
   return (
     <Fade top delay={200}>
-      <section className="container pt-4">
-        <div className="row align-center d-flex pt-3">
+      <section className="container">
+        <div className="row align-center d-flex">
           <div className="order-lg-1 order-2 col-md-12 col-lg-6 text-lg-start text-center">
             <h1 className="mb-3 tag__line">
               Forget Busy Work, <br />

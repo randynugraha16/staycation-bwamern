@@ -5,7 +5,7 @@
   "imageUrls": [
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-1.jpg"
+      "url": "/images/img-featured-3.jpg"
     },
     {
       "_id": "asd1293uasdads1",
@@ -13,7 +13,7 @@
     },
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-3.jpg"
+      "url": "/images/img-featured-1.jpg"
     }
   ],
   "country": "Indonesia",
@@ -141,7 +141,7 @@
   ],
   "testimonial": {
     "_id": "asd1293uasdads1",
-    "imageUrl": "/images/testimonial-detailspage.jpg",
+    "imageUrl": "/images/testimonial-itemdetails.png",
     "name": "Happy Family",
     "rate": 4.25,
     "content": "What a great trip with my family and I should try again and again next time soon...",

@@ -2,24 +2,18 @@ import React from "react";
 import Button from "../components/Button/Button";
 import Fade from "react-reveal/Fade";
 
-export default function MostPicked(props) {
+export default function Activities({ data }) {
   return (
-    <section className="container" ref={props.refMostPicked}>
-      <Fade top>
-        <h4 className="mb-3">Most Picked</h4>
+    <section className="container">
+      <Fade top delay={300}>
+        <h4 className="mb-3 font-weight-medium">Treasure to Choose</h4>
       </Fade>
       <div className="container-grid">
-        {props.data.map((item, index) => {
+        {data.map((item, index2) => {
           return (
-            <div
-              key={`mostpicked-${index}`}
-              className={`item column-4 sm ${index === 0 ? "row-2" : "row-1"}`}
-            >
-              <Fade top delay={300 * index}>
-                <div className="card card-feature">
-                  <div className="tag">
-                    ${item.price} <span>per {item.unit}</span>
-                  </div>
+            <div className="item column-3 row-1" key={`treasure-${index2}`}>
+              <Fade top delay={400 * index2}>
+                <div className="card">
                   <figure className="img-wrapper">
                     <img
                       src={item.imageUrl}
@@ -29,15 +23,13 @@ export default function MostPicked(props) {
                   </figure>
                   <div className="meta-wrapper">
                     <Button
-                      className="stretched-link d-block text-white"
+                      className="stretched-link text-decoration-none d-block text-gray-800"
                       href={`/properties/${item._id}`}
                       type="link"
                     >
-                      <h5>{item.button}</h5>
+                      <h5 className="fw-bold text-darkblue">{item.name}</h5>
                     </Button>
-                    <span>
-                      {item.city}, {item.country}
-                    </span>
+                    <span className="text-gray-500">{item.type}</span>
                   </div>
                 </div>
               </Fade>

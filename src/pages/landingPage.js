@@ -1,5 +1,5 @@
-import Header from "../parts/Header";
 import React, { Component } from "react";
+import Header from "../parts/Header";
 import data from "../json/landingPage.json";
 import Hero from "../parts/Hero";
 import MostPicked from "../parts/MostPicked";

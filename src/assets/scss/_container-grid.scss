@@ -37,12 +37,18 @@
     }
     &.column-5 {
       grid-column-end: span 5;
+      @include media-breakpoint-down(lg) {
+        grid-column-end: span 12;
+      }
     }
     &.column-6 {
       grid-column-end: span 6;
     }
     &.column-7 {
       grid-column-end: span 7;
+      @include media-breakpoint-down(lg) {
+        grid-column-end: span 12;
+      }
     }
     &.column-8 {
       grid-column-end: span 8;

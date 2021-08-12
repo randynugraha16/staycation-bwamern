@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <Button
-                  href="/propperties"
+                  href="/properties"
                   type="link"
                   className="text-decoration-none text-gray-500"
                 >
