@@ -9,6 +9,21 @@ export default function Header(props) {
   const getNavLinkClass = (path) => {
     return props.location.pathname === path ? "active" : "";
   };
+
+  if (props.isCentered)
+    return (
+      <Fade>
+        <header className="spacing-sm justify-content-center">
+          <Navbar bg="light" expand="lg">
+            <Container className="justify-content-center">
+              <Navbar.Brand>
+                <IconText />
+              </Navbar.Brand>
+            </Container>
+          </Navbar>
+        </header>
+      </Fade>
+    );
   return (
     <Fade>
       <header className="spacing-sm">

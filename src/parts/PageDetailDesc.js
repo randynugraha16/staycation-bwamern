@@ -3,13 +3,12 @@ import ReactHtmlParser from "react-html-parser";
 import Fade from "react-reveal/Fade";
 
 export default function PageDetailDesc({ data }) {
-  console.log(data);
   return (
     <main>
-      <Fade bottom>
+      <Fade bottom delay={500}>
         <h4 className="pb-2">About the place</h4>
       </Fade>
-      <Fade bottom>
+      <Fade bottom delay={500}>
         <div className="description">{ReactHtmlParser(data.description)}</div>
       </Fade>
       <div className="row mt-3">

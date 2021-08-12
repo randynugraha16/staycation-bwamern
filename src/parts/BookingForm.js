@@ -66,9 +66,12 @@ export default class BookingForm extends Component {
   render() {
     const { data } = this.state;
     const { itemDetails } = this.props;
+    const handleClick = () => {
+      window.location.assign("/checkout");
+    };
 
     return (
-      <Fade bottom>
+      <Fade bottom delay={500}>
         <div className="card border booking-form">
           <h4 className="mb-3">Start Booking</h4>
           <h5 className="h2 text-darkblue mb-4">
@@ -107,7 +110,7 @@ export default class BookingForm extends Component {
             hasShadow
             isPrimary
             isBlock
-            onClick={this.startBooking}
+            onClick={handleClick}
           >
             Continue to Book
           </Button>
