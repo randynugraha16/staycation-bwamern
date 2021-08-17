@@ -25,7 +25,6 @@ class DetailsPage extends Component {
   }
   render() {
     const { page, match } = this.props;
-    // console.log(page[match.params.id]);
     const breadcrumb = [
       { pageTitle: "Home", pageHref: "/" },
       { pageTitle: "Home Details", pageHref: "#" },

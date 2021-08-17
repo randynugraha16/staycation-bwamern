@@ -27,7 +27,6 @@ class landingPage extends Component {
   }
   render() {
     const { page } = this.props;
-    console.log(page);
     if (!page.landingPage) {
       return (
         <div className="container h-100">
