@@ -69,7 +69,7 @@ export default function Hero(props) {
                 <img src={IconTreasure} alt="travel" />
                 <h6 className="mt-2">
                   <span className="text-darkblue">
-                    {numberFormat(props.data.treasures)}{" "}
+                    {numberFormat(props.data.treasure)}{" "}
                   </span>
                   <span className="text-gray-500 font-weight-light">
                     Treasure

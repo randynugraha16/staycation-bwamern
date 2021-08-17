@@ -9,7 +9,11 @@ export default function Testimoni({ data }) {
       <Fade bottom>
         <div className="row d-flex justify-content-around align-items-center">
           <div className="col-lg-5 col-12 mb-lg-0 mb-5">
-            <img src={data.imageUrl} alt={data.name} className="img-fluid" />
+            <img
+              src={`${process.env.REACT_APP_HOST}/${data.imageUrl}`}
+              alt={data.name}
+              className="img-fluid"
+            />
           </div>
           <div className="col-lg-6 col-12 text-lg-start text-center mt-0 mt-lg-4">
             <h4 className="text-darkblue mb-lg-5 mb-4">{data.name}</h4>

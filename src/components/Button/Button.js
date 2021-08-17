@@ -7,6 +7,7 @@ import { Button as ButtonBootstrap } from "react-bootstrap";
 export default function Button(props) {
   const className = [props.className];
   if (props.isPrimary) className.push("btn-primary");
+  if (props.islight) className.push("btn-secondary");
   if (props.isLarge) className.push("btn-lg");
   if (props.isSmall) className.push("btn-sm");
   if (props.hasShadow) className.push("btn-shadow");
@@ -26,7 +27,7 @@ export default function Button(props) {
             <span className="sr-only">Loading...</span>
           </>
         ) : (
-          props.childern
+          props.children
         )}
       </span>
     );
@@ -77,6 +78,7 @@ Button.propTypes = {
   target: propTypes.string,
   className: propTypes.string,
   isPrimary: propTypes.bool,
+  isLight: propTypes.bool,
   isDisabled: propTypes.bool,
   isExternal: propTypes.bool,
   isLoading: propTypes.bool,

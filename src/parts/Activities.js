@@ -16,7 +16,7 @@ export default function Activities({ data }) {
                 <div className="card">
                   <figure className="img-wrapper">
                     <img
-                      src={item.imageUrl}
+                      src={`${process.env.REACT_APP_HOST}/${item.imageUrl}`}
                       alt={item.name}
                       className="img-cover"
                     />

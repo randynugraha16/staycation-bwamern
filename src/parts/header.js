@@ -47,7 +47,7 @@ export default function Header(props) {
                   <Button
                     className="text-center nav-link"
                     type="link"
-                    href="/example"
+                    href="/checkout"
                   >
                     Browse By
                   </Button>

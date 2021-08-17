@@ -12,17 +12,15 @@ export default function PageDetailDesc({ data }) {
         <div className="description">{ReactHtmlParser(data.description)}</div>
       </Fade>
       <div className="row mt-3">
-        {data.features.map((item, index) => {
+        {data.featureId.map((item, index) => {
           return (
-            <Fade bottom delay={300 * index}>
-              <div
-                className="col-lg-3 col-6 p-2 text-center text-lg-start mb-2"
-                key={`feature-${index}`}
-              >
+            <Fade bottom delay={300 * index} key={`feature-${index}`}>
+              <div className="col-lg-3 col-6 p-2 text-center text-lg-start mb-2">
                 <img
-                  src={item.imageUrl}
+                  src={`${process.env.REACT_APP_HOST}/${item.imageUrl}`}
                   alt={item.name}
                   className="d-block mx-auto mx-lg-0 mb-2"
+                  width="50"
                 />{" "}
                 <span>{item.qty}</span>{" "}
                 <span className="text-gray-500 fw-light">{item.name}</span>
