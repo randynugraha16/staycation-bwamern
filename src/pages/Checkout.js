@@ -50,11 +50,7 @@ class Checkout extends Component {
     payload.append("lastName", data.lastName);
     payload.append("emailAddress", data.email);
     payload.append("phoneNumber", data.phone);
-<<<<<<< HEAD
     payload.append("bankFrom", data.bankName);
-=======
-    payload.append("bankFroms", data.bankName);
->>>>>>> 03a5d39be94860b658b1ebcab6eb9ab567e390ec
     payload.append("accountHolder", data.bankHolder);
     payload.append("imageUrl", data.proofPayment[0]);
     payload.append("itemId", checkout._id);
