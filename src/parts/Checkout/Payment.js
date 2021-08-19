@@ -50,6 +50,7 @@ export default function Payment(props) {
             <Fade delay={600}>
               <label htmlFor="proofPayment">Upload Bukti Transfer</label>
               <InputFile
+                type="file"
                 accept="image/*"
                 id="proofPayment"
                 name="proofPayment"
