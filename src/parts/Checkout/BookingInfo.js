@@ -13,7 +13,7 @@ export default function BookingInfo(props) {
               <div className="card">
                 <figure className="img-wrapper">
                   <img
-                    src={itemDetails.imageUrls[0].url}
+                    src={`${process.env.REACT_APP_HOST}/${itemDetails.imageId[0].imageUrl}`}
                     alt={itemDetails.name}
                     className="img-cover"
                   />
@@ -21,7 +21,7 @@ export default function BookingInfo(props) {
                 <div className="row align-items-center">
                   <div className="col">
                     <div className="meta-wrapper text-darkblue">
-                      <h5>{itemDetails.name}</h5>
+                      <h5>{itemDetails.title}</h5>
                       <span className="text-gray-500">
                         {itemDetails.city}, {itemDetails.country}
                       </span>
