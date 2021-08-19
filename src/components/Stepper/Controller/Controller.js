@@ -6,7 +6,7 @@ export default function Controller(props) {
     <Fade>
       <section className="container">
         <div className="row justify-content-center">
-          <div className="col-3" style={{ textAlign: "center" }}>
+          <div className="col-lg-3 col-12" style={{ textAlign: "center" }}>
             {props.children}
           </div>
         </div>

@@ -5,7 +5,7 @@ export default function Meta({ data, current }) {
   return (
     <Fade delay={300}>
       <div className="text-center">
-        <h1 className="h2">{data[current] && data[current].title}</h1>
+        <h1 className="h2 mt-4">{data[current] && data[current].title}</h1>
         <p className="text-gray-500 lead">
           {data[current] && data[current].description}
         </p>

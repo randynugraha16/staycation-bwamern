@@ -8,7 +8,7 @@ export default function BookingInfo(props) {
     <Fade bottom>
       <div className="container">
         <div className="row justify-content-center align-items-center">
-          <div className="col-5 border-end p-5">
+          <div className="col-lg-5 col-12 border-end mb-3 p-4 p-lg-5">
             <Fade delay={300}>
               <div className="card">
                 <figure className="img-wrapper">
@@ -39,7 +39,7 @@ export default function BookingInfo(props) {
               </div>
             </Fade>
           </div>
-          <div className="col-5 p-5 mt-5">
+          <div className="col-lg-5 col-12 p-4 p-lg-5">
             <Fade delay={600}>
               <label className="text-darkblue" htmlFor="firstName">
                 First Name
