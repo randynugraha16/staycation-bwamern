@@ -73,7 +73,7 @@ export default function Footer() {
                   type="link"
                   className="text-decoration-none text-gray-500"
                 >
-                  Terms & Conditions
+                  Terms &amp; Conditions
                 </Button>
               </li>
             </ul>
